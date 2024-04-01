@@ -97,6 +97,7 @@ alias mnt="sshfs af@pi:onedrive onedrive"
 alias working="conpi | mod | sshfs af@pi:onedrive onedrive | cd ~/onedrive/HEAD"
 alias cls="clear"
 
+
 export PATH="$HOME/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="/usr/local/bin:$PATH"
@@ -104,3 +105,8 @@ export PATH="/home/af/Applications/clion/bin:$PATH"
 export PATH="/home/af/Applications/pycharm/bin:$PATH"
 export PATH=$PATH:/usr/local/go/bin
 
+export EDITOR='nvim'
+export VISUAL='nvim'
+
+
+source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
