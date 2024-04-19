@@ -1,6 +1,11 @@
 # If set to an empty array, this variable will have no effect.
 # ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
-#
+
+# Source this env for private vars
+if [ -f ~/.env.local ]; then
+    source ~/.env.local
+fi
+
  ZSH_THEME=robbyrussell
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -91,7 +96,7 @@ alias v="nvim"
 alias vim="nvim"
 alias vi="nvim"
 alias cdr="cd rutgers/cs211/2024_1s_211"
-alias ctrp="ssh af@${LOCAL_PI_IP}"
+alias ctrp="ssh af@${PUBLIC_PI_IP}"
 alias conpi="ssh af@${PUBLIC_PI_IP}"
 alias mnt="sshfs af@pi:onedrive onedrive"
 alias working="conpi | mod | sshfs af@pi:onedrive onedrive | cd ~/onedrive/HEAD"
