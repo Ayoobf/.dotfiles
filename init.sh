@@ -3,12 +3,18 @@
 DOTFILES_DIR="$HOME/dotfiles"
 
 BACKUP_DIR="$HOME/dotfile_backups/$(date +%Y%m%d_%H%M%S)"
-
+INIT_FLE="$HOME/.zshrc"I
 stow_package() {
 	local package=$1
 	stow -t $HOME -D $package # Unstow
 	stow -t $HOME -R $package # Restow
 }
+
+# Functionto append sourcing to bashrc
+append_sourcing() {
+    local file=$1
+    echo "if [ -f $file ]; then . $file; fi" >> $INIT_FILE
+} 
 
 # Make sure the backup directory exists
 mkdir -p $BACKUP_DIR
@@ -30,6 +36,12 @@ for dir in $DOTFILES_DIR/*; do
         # Stow the package
         echo "Stowing $package..."
         stow_package $package
+
+        main_file="$HOME/.$package"  # Assuming main config files are named after the package
+        if [ -f "$main_file" ]; then
+            echo "Appending sourcing for $main_file..."
+            append_sourcing "$main_file"
+        fi
     fi
 done
 
