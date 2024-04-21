@@ -1,5 +1,5 @@
 #!/bin/bash
-
+# Helper Script
 DOTFILES_DIR="$HOME/dotfiles"
 
 BACKUP_DIR="$HOME/dotfile_backups/$(date +%Y%m%d_%H%M%S)"
