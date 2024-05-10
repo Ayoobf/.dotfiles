@@ -24,4 +24,3 @@ let maplocalleader = " "
 
 set linebreak
 
-
