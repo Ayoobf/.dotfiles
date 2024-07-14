@@ -134,3 +134,7 @@ _dotnet_zsh_complete()
 compdef _dotnet_zsh_complete dotnet
 
 source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+
+# Load Angular CLI autocompletion.
+source <(ng completion script)
