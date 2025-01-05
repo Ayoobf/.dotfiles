@@ -1,5 +1,5 @@
 function ColorMyVim(color)
-	color = color or "tokyonight"
+	color = color or "kanagawa-dragon"
 	vim.cmd.colorscheme(color)
 	-- Set transparency for various highlight groups
 

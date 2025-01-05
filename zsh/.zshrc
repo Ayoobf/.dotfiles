@@ -113,7 +113,8 @@ export PATH=$PATH:/usr/local/go/bin
 
 export EDITOR='nvim'
 export VISUAL='nvim'
-
+export PATH_TO_FX="javafx-sdk-23"
+export FX="javafx-sdk-23"
 # zsh parameter completion for the dotnet CLI
 
 _dotnet_zsh_complete()
